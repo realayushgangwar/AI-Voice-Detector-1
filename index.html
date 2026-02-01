@@ -1,1 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Voice Authenticator - NeuralScan Pro</title>
+    <link rel="stylesheet" href="style18.css">
+    <link rel="stylesheet" href="style_18_style.css">
+</head>
+<body>
+    <!-- Animated Background Particles -->
+    <div class="background-particles">
+        <div class="particle glow-purple"></div>
+        <div class="particle glow-green"></div> 
+        <div class="particle glow-blue"></div>
+        <div class="particle glow-pink"></div>
+        <div class="particle glow-cyan"></div>
+    </div>
 
+    <main class="container">
+        <!-- Floating Status Indicators -->
+        <div class="status-indicators">
+            <div class="status-item online">
+                <i class="fas fa-brain"></i> Neural Net Active
+            </div>
+            <div class="status-item ready">
+                <i class="fas fa-shield-alt"></i>Languages Ready
+            </div>
+        </div>
+
+        <header class="app-header">
+            <div class="header-glow"></div>
+            <h1><i class="fas fa-microphone-alt"></i> NeuralScan Pro</h1>
+            <p>Deepfake Voice Detection • Tamil, English, Hindi, Malayalam, Telugu</p>
+            <div class="tech-stack">
+                <span>WaveNet Analysis</span>
+                <span>Spectral Flux</span>
+                <span>99.8% Accuracy</span>
+            </div>
+        </header>
+
+        <section class="upload-card">
+            <div class="drop-zone premium" id="drop-zone">
+                <div class="upload-icon">
+                    <i class="fas fa-cloud-upload-alt fa-3x"></i>
+                </div>
+                <p><strong>Drag & drop audio</strong> or <span>click to browse</span></p>
+                <div class="supported-formats">
+                    <small>MP3, WAV, M4A • Max 50MB</small>
+                </div>
+                <input type="file" id="audio-input" accept="audio/*" hidden>
+            </div>
+
+            <div id="playback-container" class="hidden">
+                <div class="file-info premium">
+                    <div class="file-details">
+                        <span id="file-name" class="file-title">audio-file.mp3</span>
+                        <span id="file-size" class="file-meta">3.2 MB • 00:45</span>
+                    </div>
+                    <div class="playback-controls">
+                        <button id="play-btn" class="control-btn" type="button" title="Play audio">
+                            <i class="fas fa-play"></i>
+                        </button>
+                        <button id="volume-btn" class="control-btn" type="button" title="Adjust volume">
+                            <i class="fas fa-volume-up"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="waveform-container">
+                    <div id="waveform"></div>
+                    <div class="waveform-overlay">
+                        <div class="freq-bars">
+                            <div class="freq-bar"></div>
+                            <div class="freq-bar d1"></div>
+                            <div class="freq-bar d2"></div>
+                            <div class="freq-bar d3"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <button id="analyze-btn" class="primary-btn gradient">
+                    <i class="fas fa-search"></i>
+                    Run Neural Analysis
+                </button>
+            </div>
+        </section>
+
+        <!-- Enhanced Results Section -->
+        <section id="results-display" class="hidden">
+            <div class="result-metrics">
+                <div class="metric-card ai-risk">
+                    <div class="metric-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="metric-value">98.4%</div>
+                    <div class="metric-label">AI Probability</div>
+                </div>
+                <div class="metric-card language">
+                    <div class="metric-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <div class="metric-value">Telugu</div>
+                    <div class="metric-label">Detected Language</div>
+                </div>
+                <div class="metric-card confidence">
+                    <div class="metric-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="metric-value">99.2%</div>
+                    <div class="metric-label">Model Confidence</div>
+                </div>
+            </div>
+
+            <div class="result-verdict">
+                <h2 id="classification-label">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    AI-Generated Speech Detected
+                </h2>
+                <div class="verdict-badge danger">HIGH RISK</div>
+            </div>
+
+            <div class="analysis-breakdown">
+                <h3><i class="fas fa-cogs"></i> Neural Network Analysis</h3>
+                <div class="tech-breakdown">
+                    <div class="breakdown-item">
+                        <span class="label">Spectral Flux:</span>
+                        <span class="value danger">12.8x Synthetic</span>
+                    </div>
+                    <div class="breakdown-item">
+                        <span class="label">Breath Pauses:</span>
+                        <span class="value warning">Absent</span>
+                    </div>
+                    <div class="breakdown-item">
+                        <span class="label">Formant Stability:</span>
+                        <span class="value danger">98% Uniform</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="action-buttons">
+                <button class="secondary-btn">
+                    <i class="fas fa-download"></i> Export Report
+                </button>
+                <button class="secondary-btn outline">
+                    <i class="fas fa-share"></i> Share Results
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://unpkg.com/wavesurfer.js"></script>
+    <script src="script18.js"></script>
+</body>
+</html>
